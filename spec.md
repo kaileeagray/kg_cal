@@ -1,5 +1,4 @@
 # HTML, JavaScript, CSS Calendar project
-======
 
 ## Overview
 Write a calendar application using HTML, JavaScript, and CSS.
