@@ -1,18 +1,22 @@
-### HTML, JavaScript, CSS Calendar project
+# HTML, JavaScript, CSS Calendar project
+======
 
 ## Overview
 Write a calendar application using HTML, JavaScript, and CSS.
 
 ## Requirements
 1. [ ] The user interface should generally have two panes.
+
 2. [ ] One pane should have a calendar with clickable days
+
 3. [ ] the other should have time slots for a selected day
+
 4. [ ] The time slots can be in any increment you wish - hourly, 30-minutes, 15-minutes, etc
+
 5. [ ] Each time slot must be able to have a text message attached to make appointments.
 
 
 ## Walk-through
-A walk-through of a sample use of this application is as follows.
 1. The user clicks on a day on the calendar, say, December 25th.
 2. The time slot panel updates to reflect the appointments for that day.
 3. The user then has the ability to edit an appointment for a given time slot, even for a slot that has no prior appointment.
