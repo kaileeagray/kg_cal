@@ -1,6 +1,7 @@
 ## Ideas
 + when user is typing in new appointment, make that col into col-lg-8 and the other col-lg-4
-+ 
++ rails?? https://github.com/bokmann/fullcalendar-rails
+
 
 ## Resources
 + https://developer.chrome.com/apps/app_frameworks
