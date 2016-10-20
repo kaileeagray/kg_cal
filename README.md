@@ -3,4 +3,4 @@ Front end portion. View, create, edit appointments.
 
 ## Usage
 1. Clone repo.
-2. Open index.html in your Internet browser.
+2. Open index.html in your browser.

@@ -1,9 +1,12 @@
 # ToDos
+!!!+ ability to delete events
+
++ sanitize input
++ ?blank events?
 + ability to edit in-line
-+ ability to delete events
 + easier editing of exact times
 + edit length of multi day events
-+ add title, content, url fields
++ add title, content, url, start, end time fields
 + add back end to persist data
 + use ajax with inline forms
 
@@ -17,7 +20,6 @@
 + http://stackoverflow.com/questions/9801095/jquery-fullcalendar-send-custom-parameter-and-refresh-calendar-with-json
 + http://stackoverflow.com/questions/4395786/how-to-edit-fullcalender-event-content
 
-+ when user is typing in new appointment, make that col into col-lg-8 and the other col-lg-4
 + rails?? https://github.com/bokmann/fullcalendar-rails
 
 
