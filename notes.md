@@ -1,4 +1,8 @@
-## Ideas
+# ToDos
++ ability to edit in-line
++ ability to delete events
+
+## Resources
 + https://fullcalendar.io/docs/views/changeView/
 + https://fullcalendar.io/docs/utilities/dynamic_options/
 + http://stackoverflow.com/questions/13432014/how-can-i-set-fullcalendar-options-dynamically/38299511#38299511
@@ -11,9 +15,9 @@
 
 
   $('#calendar').fullCalendar({
-      googleCalendarApiKey: '29649601574-q86gesb5f0k8lc8uclbbdcgtnso4h0d7.apps.googleusercontent.com',
+      googleCalendarApiKey: '',
       events: {
-          googleCalendarId: 'jken6omp7b4fa734gt0e9a9dao@group.calendar.google.com'
+          googleCalendarId:
           className: 'gcal-event' // an option!
       }
       {
@@ -23,6 +27,5 @@
       }
   });
 
-## Resources
 + https://developer.chrome.com/apps/app_frameworks
 + Spider Monkey: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Getting_SpiderMonkey_source_code
