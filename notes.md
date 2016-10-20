@@ -1,6 +1,13 @@
 # ToDos
 + ability to edit in-line
 + ability to delete events
++ easier editing of exact times
++ edit length of multi day events
++ add title, content, url fields
++ add back end to persist data
++ use ajax with inline forms
+
+
 
 ## Resources
 + https://fullcalendar.io/docs/views/changeView/
