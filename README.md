@@ -1,5 +1,6 @@
 # Calendar application using HTML, JavaScript, and CSS
-View, create, edit, delete appointments.
+Front end portion. View, create, edit appointments.
 
 ## Usage
-Visit webpage to view and interact with project.
+1. Clone repo.
+2. Open index.html in your Internet browser.
