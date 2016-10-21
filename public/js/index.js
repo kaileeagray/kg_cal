@@ -62,7 +62,7 @@ $(document).ready(function() {
           } else {
               var cal1Event = calEvent;
           }
-          var title = prompt('Appointment Info:', calEvent.title, {
+          var title = prompt('Edit Appointment Info:', calEvent.title, {
               buttons: {
                   Ok: true,
                   Cancel: false

@@ -1,6 +1,9 @@
 # ToDos
 !!!+ ability to delete events
-
++ enhance mobile view
++ in week view, add ability to click on text of day to go to day as well as in day
++ in week view, if user clicks on a time slot, open that slot in day view, then
+  build appointment prompt
 + sanitize input
 + ?blank events?
 + ability to edit in-line
