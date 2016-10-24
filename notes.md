@@ -1,5 +1,8 @@
 # ToDos
 !!!+ ability to delete events
++ visually separate js code
++ sat/sun diff color?
++ create repeating events
 + enhance mobile view
 + in week view, add ability to click on text of day to go to day as well as in day
 + in week view, if user clicks on a time slot, open that slot in day view, then
