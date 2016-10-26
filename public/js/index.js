@@ -41,7 +41,7 @@ $(document).ready(function() {
         }]
     });
 
-  /* -------------------create, manage cal2 (right pane)------------------- */
+  /* -------------------manage cal2 (right pane)------------------- */
   $cal2.fullCalendar('changeView', 'agendaDay');
 
   $cal2.fullCalendar('option', {
@@ -85,7 +85,7 @@ $(document).ready(function() {
   });
 
 
-  /* -------------------create, manage cal1 (right pane)------------------- */
+  /* -------------------manage cal1 (right pane)------------------- */
   $cal1.fullCalendar('option', {
       header: {
           left: 'prev,next today',
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 
   /* full calendar gives all day events given different ids in month/week view
-    and day view. we create/edit event in day (right) view, so correct for
+    and day view. create/edit event in day (right) view, so correct for
     id change to update in month/week (left)
   */
   function getCal1Event(cal2Id) {
