@@ -3,10 +3,13 @@
 + visually separate js code
 + sat/sun diff color?
 + create repeating events
+
++ multi day events auto move to first day of event -- fix so that view goes to day in which event was clicked
+
 + enhance mobile view -- bootstrap helped, but need to long press to create events
   add + or something to more easily add. maybe change add event so user could also
   click another link to create event in addition to inline event
-  
+
 + in week view, add ability to click on text of day to go to day as well as in day
 + in week view, if user clicks on a time slot, open that slot in day view, then
   build appointment prompt
