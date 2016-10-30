@@ -6,3 +6,7 @@ body {
 .col-md-6 {
   padding-top: 20px;
 }
+
+.fc-body td {
+  cursor: pointer;
+}
