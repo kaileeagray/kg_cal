@@ -10,11 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require fullcalendar.min
+ *= require application_and_overrides
  *= require_tree .
- *= require fullcalendar
- *= require fullcalendar.print
- *= require bootstrap.min
- *= require style
- *= require custom-theme/jquery-ui-1.9.2.custom.css
  *= require_self
  */

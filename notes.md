@@ -25,6 +25,7 @@
 
 
 ## Resources
++ https://github.com/driftingruby/042-fullcalendar
 + https://fullcalendar.io/docs/views/changeView/
 + https://fullcalendar.io/docs/utilities/dynamic_options/
 + http://stackoverflow.com/questions/13432014/how-can-i-set-fullcalendar-options-dynamically/38299511#38299511
