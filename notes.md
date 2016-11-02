@@ -1,13 +1,16 @@
 # ToDos
 + get events to load better -- use seed data generated from rails?
 + add bootstrap modals for new event creation
++ ability to edit in modal
++ easier editing of exact times
++ edit length of multi day events
+
 + sanitize input
+
++ drag and drop does not update event on right and vise versa
 
 + ability to delete events
 
-+ improve js readability -- model after tictactoe org visually separate js code
-
-+ sat/sun diff color?
 + create repeating events -- use date-range-picker from driftingruby?
 + multi day events auto move to first day of event -- fix so that view goes to day in which event was clicked
 
@@ -16,14 +19,12 @@
 
 + ?blank events?
 
-+ ability to edit in modal
-+ easier editing of exact times
-+ edit length of multi day events
 
 + add + or something to more easily add. maybe change add event so user could also click another link to create event in addition to inline event
 
-
 + enhance mobile view -- bootstrap helped, but need to long press to create events
+
++ pop up view of eventLimit has overlapping view issues with right pane
 
 
 
@@ -52,3 +53,5 @@
 ### DONE!
 + (ok) check on ability to create overlapping appointments
 + (x) revert rails changes and simplify
++ improve js readability -- model after tictactoe org visually separate js code
++ sat/sun diff color?

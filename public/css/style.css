@@ -10,3 +10,7 @@ body {
 .fc-body td {
   cursor: pointer;
 }
+
+.fc-sat, .fc-sun {
+    background-color: #f9f9f9;
+}
