@@ -19,7 +19,7 @@ $gray:                   #A05152; // #555
 $gray-light:             #BF7E6F; // #777
 $gray-lighter:           #D1A6A0; // #eee
 
-$brand-primary:         #A22D38; // #337ab7
+$brand-primary:         #337ab7; // 
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -33,7 +33,7 @@ $brand-danger:          #d9534f !default;
 //** Background color for `<body>`.
 $body-bg:               #FDFAFA;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            $gray-darker;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
