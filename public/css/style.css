@@ -4,15 +4,22 @@ body {
 
 .row {
   margin: 3px;
-  padding-top: 8px;
 }
 
 #calendar2 {
   z-index: 900;
 }
 
+h2 {
+  font-size: 2em !important;
+}
+
 #calendar1 {
   z-index: 950;
+}
+
+.col-md-6 {
+  padding-top: 10px;
 }
 
 .navbar {
@@ -21,7 +28,7 @@ body {
 }
 
 .edit {
-  visibility: hidden;
+  display: none;
 }
 
 .fc-body td {
