@@ -5,6 +5,14 @@ $(function() {
   initializeLeftCalendar();
   $.getScript("js/events.js", function(){
   });
+  $('#datePicker')
+    .datepicker({
+        format: 'mm/dd/yyyy'
+    })
+    .on('changeDate', function(e) {
+        // Revalidate the date field
+        $('#eventForm').formValidation('revalidateField', 'date');
+    });
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -14,7 +22,7 @@ var initializeCalendar = function() {
       eventLimit: true, // allow "more" link when too many events
       // create events
       events: events(),
-      eventBackgroundColor: '#337ab7',
+      eventBackgroundColor: '#337ab7'
     });
 }
 

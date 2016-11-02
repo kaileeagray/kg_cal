@@ -78,7 +78,7 @@ body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
 	text-align: center;
 	overflow: hidden;
-	font-family: "Courier New", Courier, monospace;
+	font-family: "Arial", sans-serif;
 
 	/* don't allow browser text-selection */
 	-webkit-touch-callout: none;
@@ -103,14 +103,12 @@ NOTE: use percentage font sizes or else old IE chokes
 
 .fc-icon-left-single-arrow:after {
 	content: "\02039";
-	font-weight: bold;
 	font-size: 200%;
 	top: -7%;
 }
 
 .fc-icon-right-single-arrow:after {
 	content: "\0203A";
-	font-weight: bold;
 	font-size: 200%;
 	top: -7%;
 }
@@ -1178,7 +1176,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .fc-time-grid-event .fc-time {
-	font-size: .85em;
+	font-size: 1em;
 	white-space: nowrap;
 }
 
@@ -1209,7 +1207,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .fc-time-grid-event.fc-short .fc-title {
-	font-size: .85em; /* make the title text the same size as the time */
+	font-size: 1.5em; /* make the title text the same size as the time */
 	padding: 0; /* undo padding from above */
 }
 
