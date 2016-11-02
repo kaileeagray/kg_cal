@@ -3,6 +3,9 @@ $(function() {
   cacheDOM();
   initializeRightCalendar();
   initializeLeftCalendar();
+  $.getScript("js/events.js", function(){
+   alert("Script loaded but not necessarily executed.");
+  });
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -11,7 +14,7 @@ var initializeCalendar = function() {
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       // create events
-        events: seeds
+      events: events()
     });
 }
 
