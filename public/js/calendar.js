@@ -13,6 +13,11 @@ $(function() {
         // Revalidate the date field
         $('#eventForm').formValidation('revalidateField', 'date');
     });
+  $('#timepicker1').timepicker({
+    minuteStep: 1,
+    template: 'modal'
+  });
+
 });
 
 /* --------------------------initialize calendar-------------------------- */

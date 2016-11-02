@@ -27,6 +27,8 @@
 
 
 ## Resources
++ http://jdewit.github.io/bootstrap-timepicker/
++ http://formvalidation.io/examples/bootstrap-datepicker/
 + https://github.com/driftingruby/042-fullcalendar
 + https://fullcalendar.io/docs/views/changeView/
 + https://fullcalendar.io/docs/utilities/dynamic_options/

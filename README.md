@@ -1,5 +1,5 @@
 # Desktop calendar application using HTML, JavaScript, and CSS
-View, create, edit appointments. Created using [Full Calendar](https://fullcalendar.io/).
+View, create, edit appointments. Created using [Full Calendar](https://fullcalendar.io/), [Bootstrap Timepicker](http://jdewit.github.io/bootstrap-timepicker/), [Bootstrap Datepicker](http://formvalidation.io/examples/bootstrap-datepicker/).
 Front end only. Checkout [beginning Rails back end work](https://github.com/kaileeagray/kg_cal/tree/rails).
 
 ## Load
