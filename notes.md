@@ -1,5 +1,5 @@
 # ToDos
-+ revert rails changes and simplify
++ get events to load better -- use seed data generated from rails?
 + add bootstrap modals for new event creation
 + sanitize input
 
@@ -11,21 +11,19 @@
 + create repeating events -- use date-range-picker from driftingruby?
 + multi day events auto move to first day of event -- fix so that view goes to day in which event was clicked
 
-+ enhance mobile view -- bootstrap helped, but need to long press to create events
-  add + or something to more easily add. maybe change add event so user could also
-  click another link to create event in addition to inline event
-
 + in week view, if user clicks on a time slot, open that slot in day view, then
   build appointment prompt
 
-
 + ?blank events?
 
-+ ability to edit in-line
++ ability to edit in modal
 + easier editing of exact times
 + edit length of multi day events
 
-+ check on ability to create overlapping appointments
++ add + or something to more easily add. maybe change add event so user could also click another link to create event in addition to inline event
+
+
++ enhance mobile view -- bootstrap helped, but need to long press to create events
 
 
 
@@ -49,3 +47,8 @@
 + (x) add back end to persist data
 + (x) rails?? https://github.com/bokmann/fullcalendar-rails
 + use ajax with inline forms
+
+
+### DONE!
++ (ok) check on ability to create overlapping appointments
++ (x) revert rails changes and simplify

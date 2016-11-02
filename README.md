@@ -16,7 +16,8 @@ Front end only. Checkout [beginning Rails back end work](https://github.com/kail
 1. Click on a day within the month or week view calendar on the left pane.
 2. The day will load in the right day agenda view on the right.
 3. Within the right day agenda, click on any time slot to create an appointment.
-3. The user then has the ability to edit an appointment for a given time slot, even for a slot that has no prior appointment.
+4. If you want to create a longer event, click and drag the event to your desired lenghth.
+5. The user then has the ability to edit an appointment for a given time slot, even for a slot that has no prior appointment.
 
 ### View or edit an existing appointment
 1. Click on day of existing appointment within the month or week view calendar on the left pane. Or navigate to day within day view.
@@ -25,4 +26,4 @@ Front end only. Checkout [beginning Rails back end work](https://github.com/kail
 4. A modal will appear. You can update the title, time, date, or delete the event.
 
 
-### Note: events do not persist
+#### Note: events do not persist.
