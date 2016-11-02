@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-[Faker::StarWars.quote, Faker::Beer.name, Faker::GameOfThrones.character, Faker::Hipster.sentence(3)].each do |faker|
-  50.times do
+50.times do
+  [Faker::StarWars.quote, Faker::Beer.name, Faker::GameOfThrones.character, Faker::Hipster.sentence(3)].each do |faker|
     event = Event.new
     event.title = faker
     start = Faker::Time.between(1.year.ago, Date.today + 1.year, :morning)
