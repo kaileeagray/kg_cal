@@ -1,6 +1,6 @@
 # Desktop calendar application using HTML, JavaScript, and CSS
-View, create, edit appointments.
-Front end only. Checkout [beginning Rails back end work](https://github.com/kaileeagray/kg_cal/tree/rails)
+View, create, edit appointments. Created using [Full Calendar](https://fullcalendar.io/).
+Front end only. Checkout [beginning Rails back end work](https://github.com/kaileeagray/kg_cal/tree/rails).
 
 ## Load
 + visit [kg-cal on Heroku](https://kg-cal.herokuapp.com/)

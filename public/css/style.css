@@ -1,6 +1,5 @@
 body {
   font-size: 14px;
-  padding: 25px;
 }
 
 #calendar2 {
@@ -20,5 +19,17 @@ body {
 }
 
 .fc-sat, .fc-sun {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
+}
+
+.left {
+  float: left;
+}
+
+.fc-event .fc-bg {
+  background-color: #337ab7;
+}
+
+.fc-unthemed .fc-today {
+  background-color: rgb(252, 248, 228) !important;
 }

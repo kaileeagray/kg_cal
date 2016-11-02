@@ -13,7 +13,8 @@ var initializeCalendar = function() {
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       // create events
-      events: events()
+      events: events(),
+      eventBackgroundColor: '#337ab7',
     });
 }
 
@@ -30,7 +31,8 @@ var initializeRightCalendar = function()  {
 
   $cal2.fullCalendar('option', {
       header: {
-          right: 'prev,next today',
+          center: '',
+          right: 'prev,next today'
       },
       selectable: true,
       selectHelper: true,
