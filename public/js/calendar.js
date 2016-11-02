@@ -4,7 +4,6 @@ $(function() {
   initializeRightCalendar();
   initializeLeftCalendar();
   $.getScript("js/events.js", function(){
-   alert("Script loaded but not necessarily executed.");
   });
 });
 
