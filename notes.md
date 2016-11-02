@@ -25,6 +25,8 @@
 + easier editing of exact times
 + edit length of multi day events
 
++ check on ability to create overlapping appointments
+
 
 
 ## Resources
