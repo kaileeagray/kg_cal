@@ -3,6 +3,14 @@ body {
   padding: 25px;
 }
 
+#calendar2 {
+  z-index: 900;
+}
+
+#calendar1 {
+  z-index: 950;
+}
+
 .col-md-6 {
   padding-top: 20px;
 }

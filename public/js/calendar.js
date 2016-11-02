@@ -111,32 +111,3 @@ var getCal1Event = function(cal2Id) {
     var id = "_fc" + num;
     return $cal1.fullCalendar('clientEvents', id)[0];
 }
-
-
-var seeds = [{
-    "title": "All Day Event",
-    "start": "2016-11-01"
-}, {
-    "title": "Long Event",
-    "start": "2016-11-07",
-    "end": "2016-11-10"
-}, {
-    "id": "999",
-    "title": "Repeating Event",
-    "start": "2016-11-10T16:00:00-05:00"
-}, {
-    "id": "999",
-    "title": "Repeating Event",
-    "start": "2016-11-16T16:00:00-05:00"
-}, {
-    "title": "Conference",
-    "start": "2016-11-11",
-    "end": "2016-11-13"
-}, {
-    "title": "Meeting",
-    "start": "2016-11-12T10:30:00-05:00",
-    "end": "2016-11-12T12:30:00-05:00"
-}, {
-    "title": "Run tests",
-    "start": "2016-11-12T12:00:00-05:00"
-}]
