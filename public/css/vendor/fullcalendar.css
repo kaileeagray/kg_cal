@@ -50,7 +50,6 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: #fcf8e3;
 }
 
 .fc-highlight { /* when user is selecting cells */
@@ -175,7 +174,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 /* Firefox has an annoying inner border */
 .fc button::-moz-focus-inner { margin: 0; padding: 0; }
-	
+
 .fc-state-default { /* non-theme */
 	border: 1px solid;
 }
@@ -198,7 +197,7 @@ NOTE: use percentage font sizes or else old IE chokes
 	margin: 0 .2em;
 	vertical-align: middle;
 }
-	
+
 /*
   button states
   borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
@@ -419,7 +418,7 @@ a[data-goto]:hover {
 	border-right: 0 hidden transparent;
 
 	/* no bottom borders on rows */
-	border-bottom: 0 hidden transparent; 
+	border-bottom: 0 hidden transparent;
 }
 
 .fc-row:first-child table {
@@ -526,7 +525,7 @@ temporary rendered events).
 
 .fc-event,
 .fc-event-dot {
-	background-color: #3a87ad; /* default BACKGROUND color */
+	background-color: #337ab7; /* default BACKGROUND color */
 }
 
 /* overpower some of bootstrap's and jqui's styles on <a> tags */
@@ -836,7 +835,7 @@ a.fc-more:hover {
 .fc .fc-toolbar > * > :first-child { /* extra precedence to override button border margins */
 	margin-left: 0;
 }
-	
+
 /* title text */
 
 .fc-toolbar h2 {
@@ -853,7 +852,7 @@ a.fc-more:hover {
 .fc-toolbar .ui-state-hover {
 	z-index: 2;
 }
-	
+
 .fc-toolbar .fc-state-down {
 	z-index: 3;
 }

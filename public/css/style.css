@@ -18,9 +18,6 @@ body {
   cursor: pointer;
 }
 
-.fc-sat, .fc-sun {
-  background-color: #f9f9f9;
-}
 
 .left {
   float: left;
@@ -30,6 +27,16 @@ body {
   background-color: #337ab7;
 }
 
-.fc-unthemed .fc-today {
-  background-color: rgb(252, 248, 228) !important;
+.navbar-btn {
+  margin-right: 15px;
+}
+
+.fc-today .fc-day-number {
+  background: #d9534f;
+  color: white;
+  font-weight: bold;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 2px;
 }
