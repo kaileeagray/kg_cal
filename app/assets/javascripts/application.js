@@ -16,4 +16,6 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require fullcalendar.min
+//= require full_calendar
+//= require date_range_picker
 //= require_tree .

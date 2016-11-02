@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'faker'
 
 gem 'momentjs-rails'
 gem 'bootstrap-sass'
