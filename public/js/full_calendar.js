@@ -1,5 +1,4 @@
 $(function() {
-
   initializeCalendar();
   cacheDOM();
   initializeRightCalendar();
@@ -16,9 +15,7 @@ var initializeCalendar = function() {
     });
 }
 
-
-
-/*global variables (fix this)...*/
+/*--------------------------global variables (change)--------------------------*/
 var cacheDOM = function() {
   $cal = $('.calendar');
   $cal1 = $('#calendar1');
@@ -36,37 +33,10 @@ var initializeRightCalendar = function()  {
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
-          eventForm(start, end);
-          var title = prompt('Appointment Info:');
-          var eventData;
-          if (title) {
-              eventData = {
-                  title: title,
-                  start: start,
-                  end: end
-              };
-              $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
-          }
-        $cal.fullCalendar('unselect');
+        newEvent(start, end);
       },
       eventClick: function(calEvent, jsEvent, view) {
-          if (calEvent.allDay) {
-              var cal1Event = getCal1Event(calEvent._id);
-          } else {
-              var cal1Event = calEvent;
-          }
-          var title = prompt('Edit Appointment Info:', calEvent.title, {
-              buttons: {
-                  Ok: true,
-                  Cancel: false
-              }
-          });
-          if (title) {
-              calEvent.title = title;
-              cal1Event.title = title;
-              $cal2.fullCalendar('updateEvent', calEvent);
-              $cal1.fullCalendar('updateEvent', cal1Event);
-          }
+        editEvent(calEvent, jsEvent, view);
       }
   });
 }
@@ -94,6 +64,41 @@ var cal2GoTo = function(date) {
     $cal2.fullCalendar('gotoDate', date);
 }
 
+
+/*Form to input or edit event data*/
+var newEvent = function(start, end) {
+  var title = prompt('Appointment Info:');
+  var eventData;
+  if (title) {
+      eventData = {
+          title: title,
+          start: start,
+          end: end
+      };
+      $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
+  }
+}
+
+var editEvent = function(calEvent, jsEvent, view) {
+  if (calEvent.allDay) {
+      var cal1Event = getCal1Event(calEvent._id);
+  } else {
+      var cal1Event = calEvent;
+  }
+  var title = prompt('Edit Appointment Info:', calEvent.title, {
+      buttons: {
+          Ok: true,
+          Cancel: false
+      }
+  });
+  if (title) {
+      calEvent.title = title;
+      cal1Event.title = title;
+      $cal2.fullCalendar('updateEvent', calEvent);
+      $cal1.fullCalendar('updateEvent', cal1Event);
+  }
+}
+
 /* full calendar gives all day events given different ids in month/week view
   and day view. create/edit event in day (right) view, so correct for
   id change to update in month/week (left)
@@ -103,12 +108,6 @@ var getCal1Event = function(cal2Id) {
     var id = "_fc" + num;
     return $cal1.fullCalendar('clientEvents', id)[0];
 }
-
-/*Form to input or edit event data*/
-var eventForm = function(start, end) {
-
-}
-
 
 
 var seeds = [{
