@@ -16,6 +16,9 @@ var initializeCalendar = function() {
     });
 }
 
+
+
+/*global variables (fix this)...*/
 var cacheDOM = function() {
   $cal = $('.calendar');
   $cal1 = $('#calendar1');
@@ -33,6 +36,7 @@ var initializeRightCalendar = function()  {
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
+          eventForm(start, end);
           var title = prompt('Appointment Info:');
           var eventData;
           if (title) {
@@ -99,6 +103,12 @@ var getCal1Event = function(cal2Id) {
     var id = "_fc" + num;
     return $cal1.fullCalendar('clientEvents', id)[0];
 }
+
+/*Form to input or edit event data*/
+var eventForm = function(start, end) {
+
+}
+
 
 
 var seeds = [{
