@@ -1,25 +1,14 @@
-# ToDos
-+ focus on 30 min length appointments only to streamline
+# ToDos  
++ create new event from modal
++ load data to edit
++ update data from edit
 
-+ sanitize input
-
-+ drag and drop does not update event on right and vise versa
++ sanitize input, allow ?blank events?
 
 + ability to delete events
 
-+ create repeating events -- use date-range-picker from driftingruby?
-+ multi day events auto move to first day of event -- fix so that view goes to day in which event was clicked
-
 + in week view, if user clicks on a time slot, open that slot in day view, then
   build appointment prompt or maybe eliminate week view?
-
-+ ?blank events?
-
-+ add + or something to more easily add. maybe change add event so user could also click another link to create event in addition to inline event
-
-+ enhance mobile view -- bootstrap helped, but need to long press to create events
-
-+ hover over event in month view to get more info
 
 ## Resources
 + http://jdewit.github.io/bootstrap-timepicker/
@@ -45,8 +34,15 @@
 + use ajax with inline forms
 + easier editing of exact times
 + edit length of multi day events
++ drag and drop does not update event on right and vise versa
++ create repeating events -- use date-range-picker from driftingruby?
++ multi day events auto move to first day of event -- fix so that view goes to day in which event was clicked
++ enhance mobile view -- bootstrap helped, but need to long press to create events
+
 
 ### DONE!
++ add + or something to more easily add. maybe change add event so user could also click another link to create event in addition to inline event
++ focus on 30 min length appointments only to streamline
 + (ok) check on ability to create overlapping appointments
 + (x) revert rails changes and simplify
 + improve js readability -- model after tictactoe org visually separate js code
