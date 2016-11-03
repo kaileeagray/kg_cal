@@ -5,6 +5,7 @@ $(function() {
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
+  disableEnter();
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -64,6 +65,7 @@ var initializeLeftCalendar = function() {
           cal2GoTo(date);
       },
       eventClick: function(calEvent) {
+        console.log(calEvent)
           cal2GoTo(calEvent.start);
       }
   });
@@ -116,14 +118,17 @@ var editEvent = function(calEvent) {
     alert("Title can't be blank. Please try again.")
     }
   });
-  $('#delete').unbind();
   $('#delete').on('click', function() {
-    $cal.fullCalendar('removeEvents', [calEvent.id]);
+    console.log(calEvent)
+    $('#delete').unbind();
+    if (calEvent._id.includes("_fc")){
+      $cal1.fullCalendar('removeEvents', [getCal1Id(calEvent._id)]);
+      $cal2.fullCalendar('removeEvents', [calEvent._id]);
+    } else {
+      $cal.fullCalendar('removeEvents', [calEvent._id]);
+    }
     $('#editEvent').modal('hide');
   });
-}
-
-var manageDrop = function() {
 }
 
 /* --------------------------load date in navbar-------------------------- */
@@ -134,3 +139,22 @@ var showTodaysDate = function() {
   d = n.getDate();
   $("#todaysDate").html("Today is " + m + "/" + d + "/" + y);
 };
+
+/* full calendar gives newly created given different ids in month/week view
+    and day view. create/edit event in day (right) view, so correct for
+    id change to update in month/week (left)
+  */
+var getCal1Id = function(cal2Id) {
+  var num = cal2Id.replace('_fc', '') - 1;
+  var id = "_fc" + num;
+  return id;
+}
+
+var disableEnter = function() {
+  $('body').bind("keypress", function(e) {
+    if (e.keyCode == 13) {
+      e.preventDefault();
+      return false;
+    }
+  });
+}
