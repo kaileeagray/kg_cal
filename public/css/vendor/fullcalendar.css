@@ -724,9 +724,7 @@ tr:first-child > td > .fc-day-grid-event {
 	overflow: hidden;
 }
 
-.fc-day-grid-event .fc-time {
-	font-weight: bold;
-}
+
 
 /* resizer (cursor devices) */
 
@@ -1207,7 +1205,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .fc-time-grid-event.fc-short .fc-title {
-	font-size: 1.5em; /* make the title text the same size as the time */
+	font-size: 1em; /* make the title text the same size as the time */
 	padding: 0; /* undo padding from above */
 }
 

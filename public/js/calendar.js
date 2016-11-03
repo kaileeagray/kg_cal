@@ -5,7 +5,8 @@ $(function() {
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  dateTimePickers();
+  $('#datetimepicker1').datetimepicker();
+  $('#datetimepicker2').datetimepicker();
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -18,6 +19,7 @@ var initializeCalendar = function() {
       defaultTimedEventDuration: '00:30:00',
       forceEventDuration: true,
       eventBackgroundColor: '#337ab7',
+      editable: false
     });
 }
 
@@ -38,7 +40,6 @@ var initializeRightCalendar = function()  {
         center: '',
         right: 'prev,next today'
       },
-      editable: true,
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
@@ -76,6 +77,7 @@ var cal2GoTo = function(date) {
 
 /*-------------------Form to input or edit event data-------------------*/
 var newEvent = function(start, end) {
+
   $('#newEvent').modal('show');
 
   var eventData;
@@ -118,25 +120,6 @@ var getCal1Event = function(cal2Id) {
 
 var loadEvents = function() {
   $.getScript("js/events.js", function(){
-  });
-}
-
-var dateTimePickers = function() {
-  $('#datePicker1')
-    .datepicker({
-        format: 'mm/dd/yyyy'
-    });
-  $('#timepicker1').timepicker({
-    minuteStep: 1,
-    template: 'modal'
-  });
-  $('#datePicker2')
-    .datepicker({
-        format: 'mm/dd/yyyy'
-    });
-  $('#timepicker2').timepicker({
-    minuteStep: 1,
-    template: 'modal'
   });
 }
 

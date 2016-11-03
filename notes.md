@@ -19,7 +19,7 @@
 
 + enhance mobile view -- bootstrap helped, but need to long press to create events
 
-
++ hover over event in month view to get more info
 
 ## Resources
 + http://jdewit.github.io/bootstrap-timepicker/
