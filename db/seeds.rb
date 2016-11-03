@@ -5,14 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-50.times do
-  [Faker::StarWars.quote, Faker::Beer.name, Faker::GameOfThrones.character, Faker::Hipster.sentence(3)].each do |faker|
+5.times do
+  [Faker::StarWars.quote, Faker::Beer.name, Faker::GameOfThrones.character, Faker::Pokemon.location].each do |faker|
     event = Event.new
     event.title = faker
-    start = Faker::Time.between(1.year.ago, Date.today + 1.year, :morning)
+    start = Faker::Time.between(2.months.ago, Date.today + 2.months, :morning)
     event.start = start
-    event.end = Faker::Time.between(start, start + 2.days, :evening)
-    event.color = ['black','green','red', nil].sample
+    event.save
+  end
+end
+
+5.times do
+  [Faker::StarWars.planet, Faker::Beer.style, Faker::GameOfThrones.house, Faker::Hacker.ingverb].each do |faker|
+    event = Event.new
+    event.title = faker
+    start = Faker::Time.between(2.months.ago, Date.today + 2.months, :afternoon)
+    event.start = start
+    event.save
+  end
+end
+
+5.times do
+  [Faker::Space.nebula, Faker::Pokemon.name, Faker::Space.agency, Faker::Superhero.power].each do |faker|
+    event = Event.new
+    event.title = faker
+    start = Faker::Time.between(2.months.ago, Date.today + 2.months, :evening)
+    event.start = start
     event.save
   end
 end
