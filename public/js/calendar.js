@@ -1,10 +1,10 @@
 $(function() {
+  loadEvents();
   showTodaysDate();
   initializeCalendar();
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  loadEvents();
   dateTimePickers();
 });
 
@@ -15,6 +15,8 @@ var initializeCalendar = function() {
       eventLimit: true, // allow "more" link when too many events
       // create events
       events: events(),
+      defaultTimedEventDuration: '00:30:00',
+      forceEventDuration: true,
       eventBackgroundColor: '#337ab7',
     });
 }
@@ -32,9 +34,9 @@ var initializeRightCalendar = function()  {
 
   $cal2.fullCalendar('option', {
     slotEventOverlap: false,
-      header: {
-          center: '',
-          right: 'prev,next today'
+    header: {
+        center: '',
+        right: 'prev,next today'
       },
       editable: true,
       selectable: true,
