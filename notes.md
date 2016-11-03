@@ -6,7 +6,7 @@
 + need to grab date from click in agenda day view
   setValue(targetMoment) - Sets the model value of the component takes a moment object. An error event will be emmited if the targetMoment does not pass the configured validations. Otherwise the date variable will be set and the relevant events will be fired.
 
-
++
 + load data to create new event from agenda view
 + load data to edit
 + update data from edit

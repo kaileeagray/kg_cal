@@ -5,14 +5,6 @@ $(function() {
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  initializeDateTimePicker();
-
-
-  // $('#datetimepicker2').datetimepicker({
-  //   inline: true,
-  //   sideBySide: true
-  // });
-
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -26,7 +18,8 @@ var initializeCalendar = function() {
       forceEventDuration: true,
       eventBackgroundColor: '#337ab7',
       editable: false,
-      height: screen.height - 160
+      height: screen.height - 160,
+      timezone: 'America/Chicago'
     });
 }
 
@@ -51,11 +44,11 @@ var initializeRightCalendar = function()  {
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
-        newEvent(start);
+          newEvent(start);
       },
       eventClick: function(calEvent, jsEvent, view) {
-        editEvent(calEvent, jsEvent, view);
-      }
+          editEvent(calEvent);
+      },
   });
 }
 
@@ -83,62 +76,49 @@ var cal2GoTo = function(date) {
 }
 
 
-/*-------------------Form to input or edit event data-------------------*/
-var newEvent = function(start) {
-  if (!start) {
-    start = Date.now();
-  }
-  $('#newEvent').modal('show');
-
-  console.log(start._d)
-
-  $('#submit').on('click', function() {
-    var title = $('input').val();
-    console.log(title)
-    $('#newEvent').modal('hide');
-    var eventData;
-    if (title) {
-        eventData = {
-            title: title,
-            start: start
-        };
-        $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
-      }
-    $cal.fullCalendar('unselect');
-  });
-
-}
-
-var editEvent = function(calEvent, jsEvent, view) {
-  $('#editEvent').modal('show');
-
-  // if (calEvent.allDay) {
-  //     var cal1Event = getCal1Event(calEvent._id);
-  // } else {
-  //     var cal1Event = calEvent;
-  // }
-  // if (title) {
-  //     calEvent.title = title;
-  //     cal1Event.title = title;
-  //     $cal2.fullCalendar('updateEvent', calEvent);
-  //     $cal1.fullCalendar('updateEvent', cal1Event);
-  // }
-}
-
-/* full calendar gives all day events given different ids in month/week view
-  and day view. create/edit event in day (right) view, so correct for
-  id change to update in month/week (left) */
-var getCal1Event = function(cal2Id) {
-    var num = cal2Id.slice(-1) - 5;
-    var id = "_fc" + num;
-    return $cal1.fullCalendar('clientEvents', id)[0];
-}
-
 var loadEvents = function() {
   $.getScript("js/events.js", function(){
   });
 }
 
+
+var newEvent = function(start) {
+  $('input#title').val("");
+  $('#newEvent').modal('show');
+  $('#submit').unbind();
+  $('#submit').on('click', function() {
+    $('#newEvent').modal('hide');
+    var title = $('input#title').val();
+    console.log(title)
+    var eventData;
+    if (title) {
+      eventData = {
+          title: title,
+          start: start
+      };
+    }
+    $cal.fullCalendar('renderEvent', eventData, true);
+    });
+  }
+
+var editEvent = function(calEvent) {
+  $('input#editTitle').val(calEvent.title);
+  $('#editEvent').modal('show');
+  $('#update').unbind();
+  $('#update').on('click', function() {
+    var title = $('input#editTitle').val();
+    $('#editEvent').modal('hide');
+    var eventData;
+    if (title) {
+      calEvent.title = title
+      $cal.fullCalendar('updateEvent', calEvent);
+      }
+  });
+  $('#delete').unbind();
+  $('#delete').on('click', function() {
+    
+  })
+}
 
 /* --------------------------load date in navbar-------------------------- */
 var showTodaysDate = function() {
@@ -148,12 +128,3 @@ var showTodaysDate = function() {
   d = n.getDate();
   $("#todaysDate").html("Today is " + m + "/" + d + "/" + y);
 };
-
-var initializeDateTimePicker = function() {
-  $('.datetimepicker').datetimepicker({
-        format: 'yyyy-mm-dd hh:ii',
-        inline: true,
-        sideBySide: true,
-        stepping: 30
-    });
-}

@@ -12,6 +12,11 @@ h2 {
 
 #calendar1 {
   padding-bottom: 15px;
+  z-index: 950;
+}
+
+#calendar2 {
+  z-index: 900;
 }
 
 .navbar {
