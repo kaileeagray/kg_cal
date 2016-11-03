@@ -51,7 +51,7 @@ var initializeRightCalendar = function()  {
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
-        newEvent(start, end);
+        newEvent(start);
       },
       eventClick: function(calEvent, jsEvent, view) {
         editEvent(calEvent, jsEvent, view);
@@ -84,26 +84,29 @@ var cal2GoTo = function(date) {
 
 
 /*-------------------Form to input or edit event data-------------------*/
-var newEvent = function(start, end) {
+var newEvent = function(start) {
+  if (!start) {
+    start = Date.now();
+  }
   $('#newEvent').modal('show');
-  console.log(start._d)
-  $('#datepicker1').datetimepicker('setDate', start._d);
 
-  $('#submit').submit( function() {
-    console.log(this)
-    // $('h1').html(value);
-    // $('#newEvent').modal('hide');
+  console.log(start._d)
+
+  $('#submit').on('click', function() {
+    var title = $('input').val();
+    console.log(title)
+    $('#newEvent').modal('hide');
+    var eventData;
+    if (title) {
+        eventData = {
+            title: title,
+            start: start
+        };
+        $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
+      }
+    $cal.fullCalendar('unselect');
   });
-  var eventData;
-  // if (title) {
-  //     eventData = {
-  //         title: title,
-  //         start: start,
-  //         end: end
-  //     };
-  //     $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
-  //   }
-  // $cal.fullCalendar('unselect');
+
 }
 
 var editEvent = function(calEvent, jsEvent, view) {

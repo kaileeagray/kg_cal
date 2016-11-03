@@ -1,4 +1,7 @@
 # ToDos  
++ first get modal loading/sending data, then do date stuff
+
++ maybe go back to text only input to get that working first with modal. THEN try to add datetimepicker
 + create new event from modal (+ button first)
 + need to grab date from click in agenda day view
   setValue(targetMoment) - Sets the model value of the component takes a moment object. An error event will be emmited if the targetMoment does not pass the configured validations. Otherwise the date variable will be set and the relevant events will be fired.
