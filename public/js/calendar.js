@@ -5,14 +5,13 @@ $(function() {
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  $('#datetimepicker1').datetimepicker({
-        inline: true,
-        sideBySide: true
-    });
-  $('#datetimepicker2').datetimepicker({
-    inline: true,
-    sideBySide: true
-  });
+  initializeDateTimePicker();
+
+
+  // $('#datetimepicker2').datetimepicker({
+  //   inline: true,
+  //   sideBySide: true
+  // });
 
 });
 
@@ -27,7 +26,7 @@ var initializeCalendar = function() {
       forceEventDuration: true,
       eventBackgroundColor: '#337ab7',
       editable: false,
-      height: screen.height - 150
+      height: screen.height - 160
     });
 }
 
@@ -44,6 +43,7 @@ var initializeRightCalendar = function()  {
 
   $cal2.fullCalendar('option', {
     slotEventOverlap: false,
+    allDaySlot: false,
     header: {
         center: '',
         right: 'prev,next today'
@@ -86,7 +86,14 @@ var cal2GoTo = function(date) {
 /*-------------------Form to input or edit event data-------------------*/
 var newEvent = function(start, end) {
   $('#newEvent').modal('show');
+  console.log(start._d)
+  $('#datepicker1').datetimepicker('setDate', start._d);
 
+  $('#submit').submit( function() {
+    console.log(this)
+    // $('h1').html(value);
+    // $('#newEvent').modal('hide');
+  });
   var eventData;
   // if (title) {
   //     eventData = {
@@ -138,3 +145,12 @@ var showTodaysDate = function() {
   d = n.getDate();
   $("#todaysDate").html("Today is " + m + "/" + d + "/" + y);
 };
+
+var initializeDateTimePicker = function() {
+  $('.datetimepicker').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        inline: true,
+        sideBySide: true,
+        stepping: 30
+    });
+}
