@@ -6,17 +6,10 @@ body {
   margin: 3px;
 }
 
-#calendar2 {
-  z-index: 900;
-}
-
 h2 {
   font-size: 2em !important;
 }
 
-#calendar1 {
-  z-index: 950;
-}
 
 .col-md-6 {
   padding-top: 10px;

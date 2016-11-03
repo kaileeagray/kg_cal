@@ -1,5 +1,6 @@
 # ToDos  
 + create new event from modal
++ load data to create new event from agenda view
 + load data to edit
 + update data from edit
 

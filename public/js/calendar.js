@@ -5,8 +5,15 @@ $(function() {
   getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  $('#datetimepicker1').datetimepicker();
-  $('#datetimepicker2').datetimepicker();
+  $('#datetimepicker1').datetimepicker({
+        inline: true,
+        sideBySide: true
+    });
+  $('#datetimepicker2').datetimepicker({
+    inline: true,
+    sideBySide: true
+  });
+
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -19,7 +26,8 @@ var initializeCalendar = function() {
       defaultTimedEventDuration: '00:30:00',
       forceEventDuration: true,
       eventBackgroundColor: '#337ab7',
-      editable: false
+      editable: false,
+      height: screen.height - 150
     });
 }
 
@@ -77,7 +85,6 @@ var cal2GoTo = function(date) {
 
 /*-------------------Form to input or edit event data-------------------*/
 var newEvent = function(start, end) {
-
   $('#newEvent').modal('show');
 
   var eventData;
@@ -93,7 +100,6 @@ var newEvent = function(start, end) {
 }
 
 var editEvent = function(calEvent, jsEvent, view) {
-
   $('#editEvent').modal('show');
 
   // if (calEvent.allDay) {
