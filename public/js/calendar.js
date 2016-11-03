@@ -65,7 +65,6 @@ var initializeLeftCalendar = function() {
           cal2GoTo(date);
       },
       eventClick: function(calEvent) {
-        console.log(calEvent)
           cal2GoTo(calEvent.start);
       }
   });
@@ -119,7 +118,6 @@ var editEvent = function(calEvent) {
     }
   });
   $('#delete').on('click', function() {
-    console.log(calEvent)
     $('#delete').unbind();
     if (calEvent._id.includes("_fc")){
       $cal1.fullCalendar('removeEvents', [getCal1Id(calEvent._id)]);
@@ -152,9 +150,9 @@ var getCal1Id = function(cal2Id) {
 
 var disableEnter = function() {
   $('body').bind("keypress", function(e) {
-    if (e.keyCode == 13) {
-      e.preventDefault();
-      return false;
-    }
+      if (e.keyCode == 13) {
+          e.preventDefault();
+          return false;
+      }
   });
 }

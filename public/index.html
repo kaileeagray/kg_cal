@@ -2,19 +2,16 @@
 <html>
 
 <head>
-    <meta charset='utf-8' />
+    <meta charset='utf-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='css/vendor/bootstrap.min.css' rel='stylesheet' />
-    <link href='css/vendor/bootstrap-datetimepicker.min.css' rel='stylesheet' />
-
     <link href='css/vendor/fullcalendar.css' rel='stylesheet' />
     <link href='css/style.css' rel='stylesheet' />
 
     <script src='js/vendor/jquery.min.js'></script>
     <script src='js/vendor/moment.min.js'></script>
     <script src='js/vendor/bootstrap.min.js'></script>
-    <script type="text/javascript" src="js/vendor/bootstrap-datetimepicker.min.js"></script>
     <script src='js/vendor/fullcalendar.js'></script>
     <script src='js/events.js'></script>
     <script src='js/calendar.js'></script>
@@ -28,9 +25,9 @@
 
 <body>
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <p class="navbar-brand" id="todaysDate"></p>
-      </div>
+        <div class="container-fluid">
+            <p class="navbar-brand" id="todaysDate"></p>
+        </div>
     </nav>
 
     <div class="container-fluid row">
@@ -49,15 +46,15 @@
                 </div>
                 <form>
                     <div class="modal-body">
-                      <div class="form-group">
-                          <label for="title" class="form-control-label">Title</label>
-                          <input type="text" class="form-control" id="title">
-                      </div>
+                        <div class="form-group">
+                            <label for="title" class="form-control-label">Title</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-success" id="submit">Create Event</button>
-                  </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success" id="submit">Create Event</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -70,7 +67,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-            <h4 class="modal-title" id="editEvent">Update Apppointment</h4>
+                    <h4 class="modal-title" id="editEvent">Update Apppointment</h4>
                 </div>
                 <form>
                     <div class="modal-body">
@@ -78,7 +75,7 @@
                             <label for="title" class="form-control-label">Title</label>
                             <input type="text" class="form-control" id="editTitle">
                         </div>
-                      </div>
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger left" id="delete">Delete Event</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
