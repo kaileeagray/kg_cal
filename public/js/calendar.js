@@ -1,23 +1,11 @@
 $(function() {
+  showTodaysDate();
   initializeCalendar();
-  cacheDOM();
+  getCalendars();
   initializeRightCalendar();
   initializeLeftCalendar();
-  $.getScript("js/events.js", function(){
-  });
-  $('#datePicker')
-    .datepicker({
-        format: 'mm/dd/yyyy'
-    })
-    .on('changeDate', function(e) {
-        // Revalidate the date field
-        $('#eventForm').formValidation('revalidateField', 'date');
-    });
-  $('#timepicker1').timepicker({
-    minuteStep: 1,
-    template: 'modal'
-  });
-
+  loadEvents();
+  dateTimePickers();
 });
 
 /* --------------------------initialize calendar-------------------------- */
@@ -27,12 +15,12 @@ var initializeCalendar = function() {
       eventLimit: true, // allow "more" link when too many events
       // create events
       events: events(),
-      eventBackgroundColor: '#337ab7'
+      eventBackgroundColor: '#337ab7',
     });
 }
 
-/*--------------------------global variables (change)--------------------------*/
-var cacheDOM = function() {
+/*--------------------------calendar variables--------------------------*/
+var getCalendars = function() {
   $cal = $('.calendar');
   $cal1 = $('#calendar1');
   $cal2 = $('#calendar2');
@@ -43,6 +31,7 @@ var initializeRightCalendar = function()  {
   $cal2.fullCalendar('changeView', 'agendaDay');
 
   $cal2.fullCalendar('option', {
+    slotEventOverlap: false,
       header: {
           center: '',
           right: 'prev,next today'
@@ -82,7 +71,7 @@ var cal2GoTo = function(date) {
 }
 
 
-/*Form to input or edit event data*/
+/*-------------------Form to input or edit event data-------------------*/
 var newEvent = function(start, end) {
   var title = prompt('Appointment Info:');
   var eventData;
@@ -93,7 +82,8 @@ var newEvent = function(start, end) {
           end: end
       };
       $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
-  }
+    }
+  $cal.fullCalendar('unselect');
 }
 
 var editEvent = function(calEvent, jsEvent, view) {
@@ -118,10 +108,49 @@ var editEvent = function(calEvent, jsEvent, view) {
 
 /* full calendar gives all day events given different ids in month/week view
   and day view. create/edit event in day (right) view, so correct for
-  id change to update in month/week (left)
-*/
+  id change to update in month/week (left) */
 var getCal1Event = function(cal2Id) {
     var num = cal2Id.slice(-1) - 5;
     var id = "_fc" + num;
     return $cal1.fullCalendar('clientEvents', id)[0];
 }
+
+var loadEvents = function() {
+  $.getScript("js/events.js", function(){
+  });
+}
+
+var dateTimePickers = function() {
+  $('#datePicker')
+    .datepicker({
+        format: 'mm/dd/yyyy'
+    })
+    .on('changeDate', function(e) {
+        // Revalidate the date field
+        $('#eventForm').formValidation('revalidateField', 'date');
+    });
+  $('#timepicker1').timepicker({
+    minuteStep: 1,
+    template: 'modal'
+  });
+  $('#embeddingDatePicker')
+    .datepicker({
+        format: 'mm/dd/yyyy'
+    })
+    .on('changeDate', function(e) {
+        // Set the value for the date input
+        // $("#selectedDate").val($("#embeddingDatePicker").datepicker('getFormattedDate'));
+
+        // Revalidate it
+  });
+}
+
+
+/* --------------------------load date in navbar-------------------------- */
+var showTodaysDate = function() {
+  n =  new Date();
+  y = n.getFullYear();
+  m = n.getMonth() + 1;
+  d = n.getDate();
+  $("#todaysDate").html("Today is " + m + "/" + d + "/" + y);
+};
