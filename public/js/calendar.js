@@ -19,7 +19,7 @@ var initializeCalendar = function() {
       eventBackgroundColor: '#337ab7',
       editable: false,
       height: screen.height - 160,
-      timezone: 'America/Chicago'
+      timezone: 'America/Chicago',
     });
 }
 
@@ -38,17 +38,16 @@ var initializeRightCalendar = function()  {
     slotEventOverlap: false,
     allDaySlot: false,
     header: {
-        center: '',
-        right: 'prev,next today'
-      },
-      selectable: true,
-      selectHelper: true,
-      select: function(start, end) {
-          newEvent(start);
-      },
-      eventClick: function(calEvent, jsEvent, view) {
-          editEvent(calEvent);
-      },
+      right: 'prev,next today'
+    },
+    selectable: true,
+    selectHelper: true,
+    select: function(start, end) {
+        newEvent(start);
+    },
+    eventClick: function(calEvent, jsEvent, view) {
+        editEvent(calEvent);
+    },
   });
 }
 
@@ -72,7 +71,7 @@ var initializeLeftCalendar = function() {
 
 /* -------------------moves right pane to date------------------- */
 var cal2GoTo = function(date) {
-    $cal2.fullCalendar('gotoDate', date);
+  $cal2.fullCalendar('gotoDate', date);
 }
 
 
@@ -87,15 +86,18 @@ var newEvent = function(start) {
   $('#newEvent').modal('show');
   $('#submit').unbind();
   $('#submit').on('click', function() {
-  $('#newEvent').modal('hide');
   var title = $('input#title').val();
   if (title) {
     var eventData = {
         title: title,
         start: start
     };
+    $cal.fullCalendar('renderEvent', eventData, true);
+    $('#newEvent').modal('hide');
+    }
+  else {
+    alert("Title can't be blank. Please try again.")
   }
-  $cal.fullCalendar('renderEvent', eventData, true);
   });
 }
 
@@ -110,11 +112,18 @@ var editEvent = function(calEvent) {
     if (title) {
       calEvent.title = title
       $cal.fullCalendar('updateEvent', calEvent);
-      }
+    } else {
+    alert("Title can't be blank. Please try again.")
+    }
   });
   $('#delete').unbind();
   $('#delete').on('click', function() {
-  })
+    $cal.fullCalendar('removeEvents', [calEvent.id]);
+    $('#editEvent').modal('hide');
+  });
+}
+
+var manageDrop = function() {
 }
 
 /* --------------------------load date in navbar-------------------------- */

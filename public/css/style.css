@@ -50,3 +50,7 @@ h2 {
   text-align: center;
   margin: 2px;
 }
+
+.fc-today {
+  background-color: #F2F2F2;
+}

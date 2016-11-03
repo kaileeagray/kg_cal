@@ -13,7 +13,7 @@ var events = function() {
   },
   {
   id: 3,
-  title: "Ruination IPA ",
+  title: "Run tests",
   start: "2016-11-12T12:30:00.000Z",
   end: null
   },
@@ -74,7 +74,7 @@ var events = function() {
   {
   id: 13,
   title: "Dendemille Town",
-  start: "2016-10-08T14:30:00.000Z",
+  start: "2016-11-04T14:30:00.000Z",
   end: null
   },
   {
@@ -85,7 +85,7 @@ var events = function() {
   },
   {
   id: 15,
-  title: "Stone Imperial Russian Stout",
+  title: "Yoga",
   start: "2016-11-19T13:30:00.000Z",
   end: null
   },
@@ -181,7 +181,7 @@ var events = function() {
   },
   {
   id: 31,
-  title: "Scottish And Irish Ale",
+  title: "meet with Chris",
   start: "2016-11-18T18:00:00.000Z",
   end: null
   },
@@ -205,7 +205,7 @@ var events = function() {
   },
   {
   id: 35,
-  title: "Strong Ale",
+  title: "meet with Nadja",
   start: "2016-11-10T21:00:00.000Z",
   end: null
   },
@@ -229,7 +229,7 @@ var events = function() {
   },
   {
   id: 39,
-  title: "Scottish And Irish Ale",
+  title: "phone call with Dipabali",
   start: "2016-11-26T19:00:00.000Z",
   end: null
   },
@@ -247,8 +247,8 @@ var events = function() {
   },
   {
   id: 42,
-  title: "Eagle Nebula",
-  start: "2016-11-15T02:00:00.000Z",
+  title: "check on leaderboard",
+  start: "2016-11-15T12:00:00.000Z",
   end: null
   },
   {
@@ -364,5 +364,24 @@ var events = function() {
   title: "Force Fields",
   start: "2016-12-04T02:30:00.000Z",
   end: null
-  }];
+  },
+  {
+  id: 62,
+  title: "Dinner with Jaime and Tori",
+  start: "2016-11-03T19:30:00.000Z",
+  end: null
+  },
+  {
+  id: 63,
+  title: "Interview",
+  start: "2016-11-03T13:30:00.000Z",
+  end: null
+  },
+  {
+  id: 64,
+  title: "submit Rails, jQuery assessment",
+  start: "2016-11-07T17:30:00.000Z",
+  end: null
+  }
+];
 }
