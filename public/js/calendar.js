@@ -87,19 +87,17 @@ var newEvent = function(start) {
   $('#newEvent').modal('show');
   $('#submit').unbind();
   $('#submit').on('click', function() {
-    $('#newEvent').modal('hide');
-    var title = $('input#title').val();
-    console.log(title)
-    var eventData;
-    if (title) {
-      eventData = {
-          title: title,
-          start: start
-      };
-    }
-    $cal.fullCalendar('renderEvent', eventData, true);
-    });
+  $('#newEvent').modal('hide');
+  var title = $('input#title').val();
+  if (title) {
+    var eventData = {
+        title: title,
+        start: start
+    };
   }
+  $cal.fullCalendar('renderEvent', eventData, true);
+  });
+}
 
 var editEvent = function(calEvent) {
   $('input#editTitle').val(calEvent.title);
@@ -116,7 +114,6 @@ var editEvent = function(calEvent) {
   });
   $('#delete').unbind();
   $('#delete').on('click', function() {
-    
   })
 }
 
