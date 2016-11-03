@@ -120,44 +120,23 @@ var loadEvents = function() {
 }
 
 var dateTimePickers = function() {
-  $('#datePicker')
+  $('#datePicker1')
     .datepicker({
         format: 'mm/dd/yyyy'
-    })
-    .on('changeDate', function(e) {
-        // Revalidate the date field
-        $('#eventForm').formValidation('revalidateField', 'date');
     });
   $('#timepicker1').timepicker({
     minuteStep: 1,
     template: 'modal'
   });
-  $('#embeddingDatePicker')
+  $('#datePicker2')
     .datepicker({
         format: 'mm/dd/yyyy'
-    })
-    .on('changeDate', function(e) {
-        // Set the value for the date input
-        // $("#selectedDate").val($("#embeddingDatePicker").datepicker('getFormattedDate'));
-
-        // Revalidate it
+    });
+  $('#timepicker2').timepicker({
+    minuteStep: 1,
+    template: 'modal'
   });
 }
-
-var loadForm = function(edit) {
-
-  // $('#eventForm').on('click', function (event) {
-  //   var button = $(event.relatedTarget) // Button that triggered the modal
-  //   var recipient = button.data('whatever') // Extract info from data-* attributes
-  //   alert("hi");
-  //   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  //   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  //   var modal = $(this)
-  //   modal.find('.modal-title').text('New message to ' + recipient)
-  //   modal.find('.modal-body input').val(recipient)
-  // })
-}
-
 
 
 /* --------------------------load date in navbar-------------------------- */

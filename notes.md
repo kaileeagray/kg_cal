@@ -1,8 +1,5 @@
 # ToDos
-+ add bootstrap modals for new event creation
-+ ability to edit in modal
-+ easier editing of exact times
-+ edit length of multi day events
++ focus on 30 min length appointments only to streamline
 
 + sanitize input
 
@@ -21,8 +18,6 @@
 + add + or something to more easily add. maybe change add event so user could also click another link to create event in addition to inline event
 
 + enhance mobile view -- bootstrap helped, but need to long press to create events
-
-+
 
 
 
@@ -48,7 +43,8 @@
 + (x) add back end to persist data
 + (x) rails?? https://github.com/bokmann/fullcalendar-rails
 + use ajax with inline forms
-
++ easier editing of exact times
++ edit length of multi day events
 
 ### DONE!
 + (ok) check on ability to create overlapping appointments
@@ -57,3 +53,5 @@
 + sat/sun diff color?
 + (x) get events to load better -- use seed data generated from rails?
 + pop up view of eventLimit has overlapping view issues with right pane
++ add bootstrap modals for new event creation
++ ability to edit in modal
