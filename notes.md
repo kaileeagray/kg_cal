@@ -1,9 +1,12 @@
 # ToDos  
++ better selection of year and month for ux
 + sanitize input, allow ?blank events?
 + disable dragging of new event length
 + in week view, if user clicks on a time slot, open that slot in day view, then
   build appointment prompt or maybe eliminate week view?
 + work week view custom button
++ add bootstrap datetimepicker back in to allow editing of times
++ then add back in + button
 
 ## Resources
 + http://jdewit.github.io/bootstrap-timepicker/
