@@ -27,10 +27,6 @@ h2 {
   border-radius: 0;
 }
 
-.edit {
-  display: none;
-}
-
 .fc-body td {
   cursor: pointer;
 }

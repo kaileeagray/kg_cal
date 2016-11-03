@@ -28,72 +28,108 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <p class="navbar-brand" id="todaysDate"></p>
-    <div class="navbar-right">
-      <button type="button" class="navbar-btn btn btn-success" data-toggle="modal" data-target="#eventForm">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <p class="navbar-brand" id="todaysDate"></p>
+            <div class="navbar-right">
+                <button type="button" class="navbar-btn btn btn-success" data-toggle="modal" data-target="#newEvent">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button>
-    </div>
-    </p>
-  </div>
-</nav>
-  <header>
-  </header>
+            </div>
+            </p>
+        </div>
+    </nav>
+    <header>
+    </header>
 
     <div class="container-fluid row">
         <div id='calendar1' class='calendar col-md-6'></div>
         <div id='calendar2' class='calendar col-md-6'></div>
     </div>
 
-    <div class="bd-example">
-      <div class="modal fade" id="eventForm" role="dialog" aria-labelledby="eventFormLabel" aria-hidden="true">
+    <div class="modal fade" id="newEvent" role="dialog" aria-labelledby="eventFormLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <h4 class="modal-title create" id="newEvent">New Event</h4>
-              <h4 class="modal-title edit" id="editEvent">Edit Event</h4>
-            </div>
-              <form>
-                <div class="modal-body">
-                  <div class="form-group">
-                    <label for="title" class="form-control-label">Title:</label>
-                    <input type="text" class="form-control" id="title">
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label">Date</label>
-                    <div class="date">
-                      <div class="input-group input-append date" id="datePicker">
-                          <input type="text" class="form-control" name="date" />
-                          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-                      </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="newEvent">New Event</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title" class="form-control-label">Title:</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Date</label>
+                            <div class="date">
+                                <div class="input-group input-append date" id="datePicker">
+                                    <input type="text" class="form-control" name="date" />
+                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Time</label>
+                            <div class="input-group bootstrap-timepicker timepicker">
+                                <input id="timepicker1" type="text" class="form-control input-small">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                            </div>
+                        </div>
                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-success" id="submit">Create Event</button>
                   </div>
-                    <div class="form-group">
-                      <label class="form-control-label">Time</label>
-                      <div class="input-group bootstrap-timepicker timepicker">
-                        <input id="timepicker1" type="text" class="form-control input-small">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                      </div>
-                  </div>
-                </div>
-                <div class="modal-footer edit">
-                    <button type="button" class="btn btn-danger left" data-dismiss="modal">Delete Event</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success edit" id="submit">Update Event</button>
-                </div>
-                <div class="modal-footer create">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success" id="submit">Create Event</button>
-                </div>
-              </form>
+                </form>
+            </div>
         </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="editEvent" role="dialog" aria-labelledby="eventFormLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            <h4 class="modal-title" id="editEvent">Edit Event</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title" class="form-control-label">Title:</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Date</label>
+                            <div class="date">
+                                <div class="input-group input-append date" id="datePicker">
+                                    <input type="text" class="form-control" name="date" />
+                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Time</label>
+                            <div class="input-group bootstrap-timepicker timepicker">
+                                <input id="timepicker1" type="text" class="form-control input-small">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger left" data-dismiss="modal">Delete Event</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success edit" id="submit">Update Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

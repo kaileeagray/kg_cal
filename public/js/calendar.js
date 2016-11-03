@@ -36,6 +36,7 @@ var initializeRightCalendar = function()  {
           center: '',
           right: 'prev,next today'
       },
+      editable: true,
       selectable: true,
       selectHelper: true,
       select: function(start, end) {
@@ -73,37 +74,35 @@ var cal2GoTo = function(date) {
 
 /*-------------------Form to input or edit event data-------------------*/
 var newEvent = function(start, end) {
-  var title = prompt('Appointment Info:');
+  $('#newEvent').modal('show');
+
   var eventData;
-  if (title) {
-      eventData = {
-          title: title,
-          start: start,
-          end: end
-      };
-      $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
-    }
-  $cal.fullCalendar('unselect');
+  // if (title) {
+  //     eventData = {
+  //         title: title,
+  //         start: start,
+  //         end: end
+  //     };
+  //     $cal.fullCalendar('renderEvent', eventData, true); // stick? = true
+  //   }
+  // $cal.fullCalendar('unselect');
 }
 
 var editEvent = function(calEvent, jsEvent, view) {
-  if (calEvent.allDay) {
-      var cal1Event = getCal1Event(calEvent._id);
-  } else {
-      var cal1Event = calEvent;
-  }
-  var title = prompt('Edit Appointment Info:', calEvent.title, {
-      buttons: {
-          Ok: true,
-          Cancel: false
-      }
-  });
-  if (title) {
-      calEvent.title = title;
-      cal1Event.title = title;
-      $cal2.fullCalendar('updateEvent', calEvent);
-      $cal1.fullCalendar('updateEvent', cal1Event);
-  }
+
+  $('#editEvent').modal('show');
+
+  // if (calEvent.allDay) {
+  //     var cal1Event = getCal1Event(calEvent._id);
+  // } else {
+  //     var cal1Event = calEvent;
+  // }
+  // if (title) {
+  //     calEvent.title = title;
+  //     cal1Event.title = title;
+  //     $cal2.fullCalendar('updateEvent', calEvent);
+  //     $cal1.fullCalendar('updateEvent', cal1Event);
+  // }
 }
 
 /* full calendar gives all day events given different ids in month/week view
@@ -144,6 +143,21 @@ var dateTimePickers = function() {
         // Revalidate it
   });
 }
+
+var loadForm = function(edit) {
+
+  // $('#eventForm').on('click', function (event) {
+  //   var button = $(event.relatedTarget) // Button that triggered the modal
+  //   var recipient = button.data('whatever') // Extract info from data-* attributes
+  //   alert("hi");
+  //   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  //   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  //   var modal = $(this)
+  //   modal.find('.modal-title').text('New message to ' + recipient)
+  //   modal.find('.modal-body input').val(recipient)
+  // })
+}
+
 
 
 /* --------------------------load date in navbar-------------------------- */
